@@ -6,7 +6,7 @@ import { ParkingSpotData, Vehicle } from './types';
 import { Car, ParkingSquare } from 'lucide-react';
 import './App.css';
 
-const TOTAL_SPOTS = 20;
+const TOTAL_SPOTS = 40; // Updated to 40
 
 const App: React.FC = () => {
   const [spots, setSpots] = useState<ParkingSpotData[]>([]);
