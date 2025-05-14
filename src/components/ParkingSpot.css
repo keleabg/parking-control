@@ -1,0 +1,72 @@
+.parking-spot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  aspect-ratio: 1 / 1; /* Maintain square shape */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.parking-spot:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.spot-available {
+  background-color: rgba(76, 175, 80, 0.1); /* Light green */
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+.spot-available:hover {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+.spot-occupied {
+  background-color: rgba(244, 67, 54, 0.1); /* Light red */
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+.spot-occupied:hover {
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+.spot-icon {
+  margin-bottom: var(--spacing-xs);
+}
+
+.spot-id {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.spot-vehicle-info {
+  margin-top: var(--spacing-xs);
+  font-size: 0.75rem;
+  width: 100%;
+}
+
+.plate-number {
+  background-color: rgba(0,0,0,0.05);
+  padding: 2px 4px;
+  border-radius: var(--border-radius-sm);
+  font-weight: bold;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spot-occupied .plate-number {
+  color: var(--error-color);
+}
+.spot-available .plate-number {
+  color: var(--success-color);
+}
